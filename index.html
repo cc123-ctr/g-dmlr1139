@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的微信二维码</title>
+    
     <style>
         body {
             display: flex;
@@ -13,9 +14,29 @@
             margin: 0;
             background-color: #f0f0f0;
         }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%; /* 可以根据需求调整宽度 */
+            max-width: 1200px;
+        }
+        .text {
+            font-size: 40px; /* 增大字体大小 */
+            margin-right: 20px; /* 增加右边距 */
+            padding: 20px; /* 添加内边距 */
+            border: 2px solid #000; /* 添加边框 */
+            border-radius: 5px; /* 圆角边框 */
+            background-color: #fff; /* 白色背景 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap; /* 防止文字换行 */
+            writing-mode: horizontal-tb; /* 确保文字横向展示 */
+        }
         .qrcode {
-            width: 300px;
-            height: 300px;
+            width: 1074px; /* 调整二维码大小 */
+            height: auto; /* 高度自适应 */
             border: 1px solid #ccc;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -23,6 +44,11 @@
     </style>
 </head>
 <body>
-    <img class="qrcode" src="qrcode.jpg" alt="微信二维码">
+    <div class="container">
+        <div class="text">
+            <p>cn:瞅瞅</p>
+        </div>
+        <img class="qrcode" src="qrcode.jpg" alt="微信二维码">
+    </div>
 </body>
 </html>
